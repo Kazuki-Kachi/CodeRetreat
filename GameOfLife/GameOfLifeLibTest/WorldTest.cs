@@ -1,6 +1,7 @@
 using System;
 using Xunit;
 using GameOfLifeLib;
+using System.Linq;
 
 namespace GameOfLifeLibTest
 {
