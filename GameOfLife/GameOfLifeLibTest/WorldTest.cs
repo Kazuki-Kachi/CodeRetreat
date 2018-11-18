@@ -16,7 +16,7 @@ namespace GameOfLifeLibTest
         public void ”CˆÓ‚ÌL‚³‚Ì¢ŠE‚ğì‚é–‚ª‚Å‚«‚é(int x,int y)
         {
             var world = new World(x, y);
-            Assert.Equal(x * y, world.State.Count());
+            Assert.DoesNotContain(world.State, states => states.Any(state => state));
         }
     }
 }
