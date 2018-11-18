@@ -14,6 +14,6 @@ namespace GameOfLifeLib
             this.y = y;
         }
 
-        public IEnumerable<bool> State => Enumerable.Range(0, y).SelectMany(_ => Enumerable.Range(0, x), (y, x) => false);
+        public IEnumerable<IEnumerable<bool>> State => Enumerable.Range(0, y).Select(_ => Enumerable.Range(0, x).Select(__ => false));
     }
 }
