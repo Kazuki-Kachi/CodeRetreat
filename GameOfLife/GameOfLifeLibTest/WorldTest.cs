@@ -9,7 +9,7 @@ namespace GameOfLifeLibTest
     public class WorldTest
     {
 
-        public static IEnumerable<object[]> hoge => Enumerable.Range(1, short.MaxValue).Zip(Enumerable.Range(1, short.MaxValue), (x, y) => new object[] { x, y });
+        public static IEnumerable<object[]> hoge => Enumerable.Range(1, sbyte.MaxValue).Zip(Enumerable.Range(1, sbyte.MaxValue), (x, y) => new object[] { x, y });
 
         [Theory]
         [MemberData(nameof(hoge))]
