@@ -10,6 +10,7 @@ namespace GameOfLifeLib
 
         public World(int x, int y)
         {
+            if(x < 1 || y < 1) throw new System.ArgumentOutOfRangeException();
             this.x = x;
             this.y = y;
         }
