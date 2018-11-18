@@ -24,5 +24,23 @@ namespace GameOfLifeLibTest
         [MemberData(nameof(¬—§o—ˆ‚È‚¢¢ŠE‚ÌL‚³))]
         public void ¢ŠE‚Ìc‚Æ‰¡‚ÍÅ’á1ˆÈã‚ ‚é(int x, int y)
             => Assert.Throws<ArgumentOutOfRangeException>(() => new World(x, y));
+
+        [Fact]
+        public void ¢ŠE‚Ì¶¬‚É¶‚«‚Ä‚¢‚éƒZƒ‹‚ğİ’è‚Å‚«‚é()
+        {
+            /* ‚±‚ñ‚È¢ŠE‚ğì‚è‚½‚¢
+             *      
+             *  ¡¡¡ 
+             *      
+             */
+            var world = new World(5, 3, (1, 1), (2, 1), (3, 1));
+            Assert.True(world.State.SequenceEqual(
+                new[] {
+                    new[] { false,false,false,false,false },
+                    new[] { false,true,true,true,false },
+                    new[] { false,false,false,false,false },
+            }));
+        }
+
     }
 }
